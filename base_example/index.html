@@ -44,6 +44,15 @@
       <input v-model="message">
     </div>
 
+    <h3>007.</h3>
+    <div id="app-7">
+      <ol>
+    <!-- Now we provide each todo-item with the todo object    -->
+    <!-- it's representing, so that its content can be dynamic -->
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+      </ol>
+    </div>
+
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="./main.js"></script>
   </body>
