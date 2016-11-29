@@ -19,6 +19,14 @@
     <div id="app-3">
       <p v-if="seen">Now you see me</p>
     </div>
+    <h3>004.</h3>
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
 
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="./main.js"></script>
