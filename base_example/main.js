@@ -64,3 +64,17 @@ var app7 = new Vue({
     ]
   }
 })
+
+var app8 = new Vue({
+  el: '#app-8',
+  data: {
+    message: 'Hello Vue!'
+  },
+  filters: {
+    toUpperCase: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.toUpperCase()
+    }
+  }
+})
