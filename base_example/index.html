@@ -16,6 +16,10 @@
       <span v-bind:title="message">
         Hover your mouse over me for a few seconds to see my dynamically bound title!
       </span>
+      <p>abbreviation</p>
+      <div :title="message">
+        Hover your mouse over me for a few seconds to see my dynamically bound title!
+      </div>
     </div>
 
     <h3>003.</h3>
@@ -36,6 +40,10 @@
     <div id="app-5">
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
+      <div>
+        <p>abbreviation</p>
+        <button @click="reverseMessage">Reverse Message</button>
+      </div>
     </div>
 
     <h3>006.</h3>
