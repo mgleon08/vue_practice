@@ -115,3 +115,44 @@ var app10 = new Vue({
   }
 })
 
+var app11 = new Vue({
+  el: '#app-11',
+  data: {
+    question: '',
+    answer: 'I cannot give you an answer until you ask a question!'
+  },
+  watch: {
+    // 如果 question 發生改變，這個函式就會運行
+    question: function (newQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.getAnswer()
+    }
+  },
+  methods: {
+    // _.debounce 是一個透過 lodash 限制操作頻率的函式。
+    // 在這個例子中，我們希望限制訪問yesno.wtf/api的頻率
+    // ajax請求直到用戶輸入完畢才會發出
+    // 學習更多關於 _.debounce function (and its cousin
+    // _.throttle), 參考: https://lodash.com/docs#debounce
+    getAnswer: _.debounce(
+      function () {
+        var vm = this
+        if (this.question.indexOf('?') === -1) {
+          vm.answer = 'Questions usually contain a question mark. ;-)'
+          return
+        }
+        vm.answer = 'Thinking...'
+        axios.get('https://yesno.wtf/api')
+          .then(function (response) {
+            vm.answer = _.capitalize(response.data.answer)
+          })
+          .catch(function (error) {
+            vm.answer = 'Error! Could not reach the API. ' + error
+          })
+      },
+      // 這是我們為用戶停止輸入等待的毫秒數
+      500
+    )
+  }
+})
+
