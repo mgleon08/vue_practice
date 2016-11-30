@@ -78,3 +78,18 @@ var app8 = new Vue({
     }
   }
 })
+
+var app9 = new Vue({
+  el: '#app-9',
+  data: {
+    message: 'Hello Vue!'
+  },
+  computed: {
+    // a computed getter
+    reversedMessage: function () {
+      // `this` points to the app9 instance
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+
