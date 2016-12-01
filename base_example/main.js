@@ -156,3 +156,11 @@ var app11 = new Vue({
   }
 })
 
+var app12 = new Vue({
+  el: '#app-12',
+  data: {
+    hasBlue: false,
+    hasRed:  true
+  }
+})
+
