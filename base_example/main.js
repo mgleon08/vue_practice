@@ -174,3 +174,18 @@ var app13 = new Vue({
   }
 })
 
+var app14 = new Vue({
+  el: '#app-14',
+  data: {
+    isActive: true,
+    error: null
+  },
+  computed: {
+    classObject: function () {
+      return {
+        'text-blue': this.isActive && !this.error,
+        'text-red': this.error && this.error.type === 'fatal',
+      }
+    }
+  }
+})
