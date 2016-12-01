@@ -164,3 +164,13 @@ var app12 = new Vue({
   }
 })
 
+var app13 = new Vue({
+  el: '#app-13',
+  data: {
+    classObject: {
+      'text-blue': false,
+      'text-red':  true
+    }
+  }
+})
+
