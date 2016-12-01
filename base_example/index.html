@@ -7,12 +7,12 @@
   </head>
   <body>
 
-    <h3>001.</h3>
+    <h2>001. vue init</h2>
     <div id="app">
       <p>{{ message }}</p>
     </div>
 
-    <h3>002.</h3>
+    <h2>002. vue-bind</h2>
     <div id="app-2">
       <span v-bind:title="message">
         Hover your mouse over me for a few seconds to see my dynamically bound title!
@@ -23,12 +23,12 @@
       </div>
     </div>
 
-    <h3>003.</h3>
+    <h2>003. v-if</h2>
     <div id="app-3">
       <p v-if="seen">Now you see me</p>
     </div>
 
-    <h3>004.</h3>
+    <h2>004. v-for</h2>
     <div id="app-4">
       <ol>
         <li v-for="todo in todos">
@@ -37,7 +37,7 @@
       </ol>
     </div>
 
-    <h3>005.</h3>
+    <h2>005. v-on</h2>
     <div id="app-5">
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
@@ -47,13 +47,13 @@
       </div>
     </div>
 
-    <h3>006.</h3>
+    <h2>006. v-model</h2>
     <div id="app-6">
       <p>{{ message }}</p>
       <input v-model="message">
     </div>
 
-    <h3>007.</h3>
+    <h2>007. component</h2>
     <div id="app-7">
       <ol>
     <!-- Now we provide each todo-item with the todo object    -->
@@ -62,19 +62,19 @@
       </ol>
     </div>
 
-    <h3>008.</h3>
+    <h2>008. filters</h2>
     <div id="app-8">
       <p>{{ message | toUpperCase }}</p>
       <input v-model="message">
     </div>
 
-    <h3>009.</h3>
+    <h2>009. computed</h2>
     <div id="app-9">
       <p>Original message: "{{ message }}"</p>
       <p>Computed reversed message: "{{ reversedMessage }}"</p>
     </div>
 
-    <h3>010.</h3>
+    <h2>010. computed setting</h2>
     <div id="app-10">
       <div id="demo">{{ fullName }}</div>
       <div>firstName<input v-model="firstName"></div>
@@ -82,7 +82,7 @@
       <div>fullName<input v-model="fullName"></div>
     </div>
 
-    <h3>011.</h3>
+    <h2>011. watch</h2>
     <div id="app-11">
       <p>
         Ask a yes/no question:
@@ -91,25 +91,25 @@
       <p>{{ answer }}</p>
     </div>
 
-    <h3>012.</h3>
+    <h2>012. v-bind:class</h2>
     <div id="app-12">
       <div class="static"
         v-bind:class="{ 'text-blue': hasBlue, 'text-red': hasRed }">
-        v-bind:class!
+        Hello Vue!
       </div>
     </div>
 
-    <h3>013.</h3>
+    <h2>013. classObject</h2>
     <div id="app-13">
       <div v-bind:class="classObject">
-        classObject!
+        Hello Vue!
       </div>
     </div>
 
-    <h3>014.</h3>
+    <h2>014. classObject with computed</h2>
     <div id="app-14">
       <div v-bind:class="classObject">
-        classObject with computed!
+        Hello Vue!
       </div>
     </div>
 
