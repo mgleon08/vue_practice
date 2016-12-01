@@ -189,3 +189,12 @@ var app14 = new Vue({
     }
   }
 })
+
+var app15 = new Vue({
+  el: '#app-15',
+  data: {
+    isActive: false,
+    bgYellowClass: 'bg-yellow',
+    redClass: 'text-red'
+  }
+})
