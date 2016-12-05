@@ -12,6 +12,8 @@
       <p>{{ message }}</p>
     </div>
 
+    <hr>
+
     <h2>002. vue-bind</h2>
     <div id="app-2">
       <span v-bind:title="message">
@@ -22,6 +24,8 @@
         Hover your mouse over me for a few seconds to see my dynamically bound title!
       </div>
     </div>
+
+    <hr>
 
     <h2>003. v-if</h2>
     <div id="app-3">
@@ -65,6 +69,8 @@
       </template>
     </div>
 
+    <hr>
+
     <h2>004. v-for</h2>
     <div id="app-4">
       <ol>
@@ -73,6 +79,8 @@
         </li>
       </ol>
     </div>
+
+    <hr>
 
     <h2>005. v-on</h2>
     <div id="app-5">
@@ -84,11 +92,15 @@
       </div>
     </div>
 
+    <hr>
+
     <h2>006. v-model</h2>
     <div id="app-6">
       <p>{{ message }}</p>
       <input v-model="message">
     </div>
+
+    <hr>
 
     <h2>007. component</h2>
     <div id="app-7">
@@ -99,17 +111,23 @@
       </ol>
     </div>
 
+    <hr>
+
     <h2>008. filters</h2>
     <div id="app-8">
       <p>{{ message | toUpperCase }}</p>
       <input v-model="message">
     </div>
 
+    <hr>
+
     <h2>009. computed</h2>
     <div id="app-9">
       <p>Original message: "{{ message }}"</p>
       <p>Computed reversed message: "{{ reversedMessage }}"</p>
     </div>
+
+    <hr>
 
     <h2>010. computed setting</h2>
     <div id="app-10">
@@ -118,6 +136,8 @@
       <div>lastName<input v-model="lastName"></div>
       <div>fullName<input v-model="fullName"></div>
     </div>
+
+    <hr>
 
     <h2>011. watch</h2>
     <div id="app-11">
@@ -128,6 +148,8 @@
       <p>{{ answer }}</p>
     </div>
 
+    <hr>
+
     <h2>012. v-bind:class</h2>
     <div id="app-12">
       <div class="static"
@@ -136,6 +158,8 @@
       </div>
     </div>
 
+    <hr>
+
     <h2>013. classObject</h2>
     <div id="app-13">
       <div v-bind:class="classObject">
@@ -143,12 +167,16 @@
       </div>
     </div>
 
+    <hr>
+
     <h2>014. classObject with computed</h2>
     <div id="app-14">
       <div v-bind:class="classObject">
         Hello Vue!
       </div>
     </div>
+
+    <hr>
 
     <h2>015. v-bind:class with array</h2>
     <div id="app-15">
@@ -163,6 +191,8 @@
       </div>
     </div>
 
+    <hr>
+
     <h2>016. v-bind:style</h2>
     <div id="app-16">
       <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
@@ -171,6 +201,8 @@
       <div v-bind:style="styleObject"> Hello Vue! </div>
       <div v-bind:style="[baseStyles, overridingStyles]"> Hello Vue! </div>
     </div>
+
+    <hr>
 
     <h2>017. v-show</h2>
     <p>v-show 是簡單的切換元素的 CSS 屬性 display。元素會始終渲染並保持在 DOM 中。</p>
