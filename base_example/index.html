@@ -25,7 +25,44 @@
 
     <h2>003. v-if</h2>
     <div id="app-3">
-      <p v-if="seen">Now you see me</p>
+      <p v-if="seen">Yes</p>
+      <p v-else="seen">No</p>
+
+      <h3>003-1. v-if with template</h3>
+      <template v-if="seen">
+        <p>Title</p>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+      </template>
+
+      <h3>003-2. v-else-if</h3>
+      <div v-if="type === 'A'">A</div>
+      <div v-else-if="type === 'B'">B</div>
+      <div v-else-if="type === 'C'">C</div>
+      <div v-else>Not A/B/C</div>
+
+      <h3>003-3. Controlling Reusable Elements with key</h3>
+      <div><button v-on:click="toggle">Toggle login type</button></div>
+
+      <p>now with key</p>
+      <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+      </template>
+      <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+      </template>
+
+      <p>with key</p>
+      <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username" key="username-input">
+      </template>
+      <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address" key="email-input">
+      </template>
     </div>
 
     <h2>004. v-for</h2>

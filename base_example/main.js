@@ -15,7 +15,18 @@ var app2 = new Vue({
 var app3 = new Vue({
   el: '#app-3',
   data: {
-    seen: true
+    seen: true,
+    type: 'B',
+    loginType: 'username'
+  },
+  methods: {
+    toggle: function () {
+      if (this.loginType === 'username'){
+        this.loginType =  ''
+      }else {
+        this.loginType = 'username'
+      }
+    }
   }
 })
 
