@@ -172,6 +172,14 @@
       <div v-bind:style="[baseStyles, overridingStyles]"> Hello Vue! </div>
     </div>
 
+    <h2>017. v-show</h2>
+    <p>v-show 是簡單的切換元素的 CSS 屬性 display。元素會始終渲染並保持在 DOM 中。</p>
+    <p>注意 v-show 不支援 template 語法。</p>
+    <div id="app-17">
+      <div v-show="ok">Hello!</div>
+    </div>
+    <p class='bg-gray'>一般來說， v-if 有更高的切換消耗而 v-show 更高的初始渲染消耗。因此，如果需要頻繁切換使用 v-show 較好，如果在運行時條件不大可能改變則使用 v-if 較好。</p>
+
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
     <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
