@@ -198,3 +198,21 @@ var app15 = new Vue({
     redClass: 'text-red'
   }
 })
+
+var app16 = new Vue({
+  el: '#app-16',
+  data: {
+    activeColor: 'red',
+    fontSize: 30,
+    styleObject: {
+      color: 'red',
+      fontSize: '20px'
+    },
+    baseStyles: {
+      'background-color': 'blue'
+    },
+    overridingStyles: {
+      color: 'white'
+    }
+  }
+})
