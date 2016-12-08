@@ -130,7 +130,7 @@
 
     <hr>
 
-    <h2>005. v-on</h2>
+    <h2>005. v-on Event</h2>
     <div id="app-5">
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
@@ -138,6 +138,45 @@
         <p>abbreviation</p>
         <button @click="reverseMessage">Reverse Message</button>
       </div>
+
+      <h3>005-1. Count</h3>
+      <button v-on:click="counter += 1">增加 1</button>
+      <p>這個按鈕被點擊了 {{ counter }} 次。</p>
+
+      <h3>005-2. Alert</h3>
+      <button v-on:click="greet">Greet</button>
+
+      <h3>005-3 Inner with javascript</h3>
+      <button v-on:click="say('hi')">Say hi</button>
+      <button v-on:click="say('what')">Say what</button>
+
+      <h3>005-4 $event</h3>
+      <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+
+      <h3>005-5 Event-Modifiers</h3>
+      <a href="http://cn.vuejs.org/v2/guide/events.html#事件修饰符" target="_blank">Event-Modifiers</a>
+      <!-- 阻止單擊事件冒泡 -->
+      <a v-on:click.stop="doThis"></a>
+      <!-- 提交事件不再重載頁面 -->
+      <form v-on:submit.prevent="onSubmit"></form>
+      <!-- 修飾符可以串聯  -->
+      <a v-on:click.stop.prevent="doThat"></a>
+      <!-- 只有修飾符 -->
+      <form v-on:submit.prevent></form>
+      <!-- 新增事件偵聽器時使用事件捕獲模式 -->
+      <div v-on:click.capture="doThis"></div>
+      <!-- 只當事件在該元素本身（而不是子元素）觸發時觸發回調 -->
+      <div v-on:click.self="doThat"></div>
+
+      <h3>005-6 Key Modifiers</h3>
+      <a href="http://cn.vuejs.org/v2/guide/events.html#按键修饰符" target="_blank">Key Modifiers</a></br>
+      <a href="http://cn.vuejs.org/v2/api/#keyCodes" target="_blank">keyCodes</a></br>
+      <!-- 只有在 keyCode 是 13 時呼叫 vm.submit() -->
+      Enter me<input v-on:keyup.13="submit">
+      <!-- 同上 -->
+      Enter me<input v-on:keyup.enter="submit">
+      <!-- 縮寫語法 -->
+      Enter me<input @keyup.enter="submit">
     </div>
 
     <hr>

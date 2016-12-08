@@ -49,11 +49,29 @@ var app4 = new Vue({
 var app5 = new Vue({
   el: '#app-5',
   data: {
-    message: 'Hello Vue.js!'
+    message: 'Hello Vue.js!',
+    counter: 0
   },
   methods: {
     reverseMessage: function () {
       this.message = this.message.split('').reverse().join('')
+    },
+    greet: function (event) {
+      // `this` 在方法裡指當前 Vue 實例
+      alert('Greet ' + this.message + '!')
+      // `event` 是原生 DOM 事件
+      alert(event.target.tagName)
+    },
+    say: function (message) {
+      alert(message)
+    },
+    warn: function (message, event) {
+    // 現在我們可以訪問原生事件物件
+      if (event) event.preventDefault()
+      alert(message)
+    },
+    submit: function(){
+      alert('enter')
     }
   }
 })
