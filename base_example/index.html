@@ -270,6 +270,17 @@
     <p>example1.items.splice(newLength)</p>
     <a href="https://vuefe.cn/v2/guide/list.html#数组更新检测" target="_blank">array update</a>
 
+    <hr>
+
+    <h2>019. Filtered-Sorted-Results</h2>
+    <div id="app-19">
+      <h3>019-2. computed</h3>
+      <li v-for="n in evenNumbers">{{ n }}</li>
+
+      <h3>019-1. methods</h3>
+      <li v-for="n in even(numbers)">{{ n }}</li>
+    </div>
+
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
     <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
