@@ -260,6 +260,16 @@
     </div>
     <p class='bg-gray'>一般來說， v-if 有更高的切換消耗而 v-show 更高的初始渲染消耗。因此，如果需要頻繁切換使用 v-show 較好，如果在運行時條件不大可能改變則使用 v-if 較好。</p>
 
+    <hr>
+
+    <h2>018. array update</h2>
+    <p class='bg-gray'>vm.items[indexOfItem] = newValue</p>
+    <p>Vue.set(example1.items, indexOfItem, newValue)</p>
+    <p>example1.items.splice(indexOfItem, 1, newValue)</p>
+    <p class='bg-gray'>vm.items.length = newLength</p>
+    <p>example1.items.splice(newLength)</p>
+    <a href="https://vuefe.cn/v2/guide/list.html#数组更新检测" target="_blank">array update</a>
+
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
     <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
