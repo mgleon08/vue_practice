@@ -78,6 +78,54 @@
           {{ todo.text }}
         </li>
       </ol>
+
+      <h3>004-1. v-for with index</h3>
+      <ol>
+        <li v-for="(todo, index) in todos">
+          {{ index }} - {{ todo.text }}
+        </li>
+      </ol>
+
+      <h3>004-2. v-for with of</h3>
+      <ol>
+        <li v-for="todo of todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+
+      <h3>004-3. v-for with template</h3>
+      <ul>
+        <template v-for="todo in todos">
+          <li>{{ todo.text }}</li>
+        </template>
+      </ul>
+
+      <h3>004-4. v-for with object</h3>
+      <ul id="repeat-object" class="demo">
+        <li v-for="value in object">
+          {{ value }}
+        </li>
+        <p>value key</p>
+        <li v-for="(value, key) in object">
+          {{ key }} : {{ value }}
+        </li>
+        <p>value key index</p>
+        <li v-for="(value, key, index) in object">
+          {{ index }}. {{ key }} : {{ value }}
+        </li>
+      </ul>
+
+      <h3>004-5. v-for with integer</h3>
+      <div>
+        <span v-for="n in 10">{{ n }}</span>
+      </div>
+
+      <h3>004-6. v-for with key</h3>
+      <div>
+        <div v-for="todo in todos" :key="todo.id">
+          {{ todo.text }}
+        </div>
+      </div>
     </div>
 
     <hr>

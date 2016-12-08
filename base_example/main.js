@@ -37,7 +37,12 @@ var app4 = new Vue({
       { text: 'Learn JavaScript' },
       { text: 'Learn Vue' },
       { text: 'Build something awesome' }
-    ]
+    ],
+    object: {
+      FirstName: 'John',
+      LastName: 'Doe',
+      Age: 30
+    }
   }
 })
 
