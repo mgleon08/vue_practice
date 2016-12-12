@@ -14,3 +14,16 @@ var app1 = new Vue({
     ]
   }
 })
+
+// =======================================================
+
+Vue.component('my-component', {
+  template: '<p class="foo bar">Hi</p>'
+})
+
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    isActive: true,
+  }
+})
