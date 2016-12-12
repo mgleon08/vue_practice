@@ -57,3 +57,17 @@ var app3 = new Vue({
     }
   }
 })
+
+// =======================================================
+
+var Child = {
+  template: '<div>A custom component!</div>'
+}
+
+var app4 = new Vue({
+  el: '#app-4',
+  components: {
+    // <my-component> 將只在父樣板可用
+    'my-component': Child
+  }
+})
