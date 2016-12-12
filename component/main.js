@@ -71,3 +71,23 @@ var app4 = new Vue({
     'my-component': Child
   }
 })
+
+// =======================================================
+
+var data = { counter: 0 }
+
+Vue.component('simple-counter', {
+  template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+  // data 是一個函式，因此 Vue 不會警告，
+  // 但是我們為每一個元件返回了同一個物件引用
+  data: function () {
+    // return data 會導致共享同一個 data，因此要改為以下方式
+    return {
+      counter: 0
+    }
+  }
+})
+
+var app5 = new Vue({
+  el: '#app-5'
+})
