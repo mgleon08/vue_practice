@@ -278,3 +278,26 @@ var app19 = new Vue({
     }
   }
 })
+
+var app20 = new Vue({
+  el: '#app-20',
+  data: {
+    message: 'Hello Vue!',
+    checked: true,
+    checkedNames: [],
+    picked: 'One',
+    selected: 'A',
+    selectedMany: [],
+    options: [
+      { text: 'One', value: 'A' },
+      { text: 'Two', value: 'B' },
+      { text: 'Three', value: 'C' }
+    ],
+    binding1: 'text',
+    binding2: 'text',
+    binding3: 'text',
+    binding4: 'true',
+    binding5: 'text',
+    binding6: 'text'
+  }
+})
