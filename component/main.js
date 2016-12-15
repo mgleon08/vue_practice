@@ -181,3 +181,32 @@ var app6 = new Vue({
     parentMsg: "i'm Parents"
   }
 })
+
+// =======================================================
+
+Vue.component('button-counter', {
+  template: '<button v-on:click="increment">{{ counter }}</button>',
+  data: function () {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    increment: function () {
+      this.counter += 1
+      this.$emit('monitor')
+    }
+  },
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    total: 0
+  },
+  methods: {
+    incrementTotal: function () {
+      this.total += 1
+    }
+  }
+})
