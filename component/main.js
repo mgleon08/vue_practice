@@ -210,3 +210,50 @@ var app7 = new Vue({
     }
   }
 })
+
+// =======================================================
+// 自定義的表單輸入元件，使用 v-model 來進行數據雙向繫結。
+// <input v-model="something">
+// 語法糖  <input v-bind:value="something" v-on:input="something = $event.target.value">
+// 簡寫    <input v-bind:value="something" v-on:input="something = arguments[0]">
+// http://cn.vuejs.org/v2/guide/components.html#使用自定义事件的表单输入组件
+
+Vue.component('currency-input', {
+  template: '\
+    <span>\
+      $\
+      <input\
+        ref="input"\
+        v-bind:value="value"\
+        v-on:input="updateValue($event.target.value)"\
+      >\
+    </span>\
+  ',
+  props: ['value'],
+  methods: {
+    // Instead of updating the value directly, this
+    // method is used to format and place constraints
+    // on the input's value
+    updateValue: function (value) {
+      var formattedValue = value
+        // Remove whitespace on either side
+        .trim()
+        // Shorten to 2 decimal places
+        .slice(0, value.indexOf('.') + 3)
+      // If the value was not already normalized,
+      // manually override it to conform
+      if (formattedValue !== value) {
+        this.$refs.input.value = formattedValue
+      }
+      // Emit the number value through the input event
+      this.$emit('input', Number(formattedValue))
+    }
+  }
+})
+
+var app8 = new Vue({
+  el: '#app-8',
+  data: {
+    price: 123
+  }
+})
