@@ -16,11 +16,15 @@
       </ol>
     </div>
 
+    <hr>
+
     <h2>002. component class</h2>
     <div id="app-2">
       <my-component class="baz boo"></my-component>
       <my-component v-bind:class="{ active: isActive }"></my-component>
     </div>
+
+    <hr>
 
     <h2>003. component for todo list use 'is'</h2>
     <div id="todo-list-example">
@@ -39,10 +43,14 @@
       </ul>
     </div>
 
+    <hr>
+
     <h2>004. Local Registration</h2>
     <div id="app-4">
       <my-component></my-component>
     </div>
+
+    <hr>
 
     <h2>005. data Must Be a Function</h2>
     <div id="app-5">
@@ -50,6 +58,8 @@
       <simple-counter></simple-counter>
       <simple-counter></simple-counter>
     </div>
+
+    <hr>
 
     <h2>006. props</h2>
     <div id="parents">
@@ -84,6 +94,8 @@
               v-bind:prop-F="1"></child6>
     </div>
 
+    <hr>
+
     <h2>007. Custom Events</h2>
     <div id="app-7">
       <p>{{ total }}</p>
@@ -94,14 +106,16 @@
       <button-counter v-on:monitor="incrementTotal"></button-counter>
     </div>
 
+    <hr>
+
     <h2>008. Form Input Components using Custom Events(Currency Input)</h2>
     <div id="app-8">
       <currency-input v-model="price"></currency-input>
     </div>
 
+    <hr>
 
     <h2>009. Slots </h2>
-
     <div id="app-9">
       <app-layout>
         <h1 slot="header">這裡可能是一個頁面標題</h1>
@@ -111,8 +125,9 @@
       </app-layout>
     </div>
 
-    <h2>010. Scoped Slots </h2>
+    <hr>
 
+    <h2>010. Scoped Slots </h2>
     <div id="app-10">
       <div class="parent">
         <child>
@@ -131,8 +146,9 @@
       </div>
     </div>
 
-    <h2>011. Dynamic Components </h2>
+    <hr>
 
+    <h2>011. Dynamic Components </h2>
     <div id="app-11">
       <!-- 如果把切換出去的元件保留在記憶體中，可以保留它的狀態或避免重新渲染。為此可以新增一個 keep-alive 指令參數： -->
       <!-- <keep-alive> -->
