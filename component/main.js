@@ -254,3 +254,30 @@ var app8 = new Vue({
     price: 123
   }
 })
+
+// =======================================================
+// 除非子元件樣板包含至少一個 <slot> 插口，否則父元件的內容將會被丟棄。
+// 當子元件樣板只有一個沒有屬性的 slot 時，父元件整個內容片段將插入到 slot
+// 所在的 DOM 位置，並替換掉 slot 標籤本身。
+
+Vue.component('app-layout', {
+  template: '<div class="container">\
+  <header>\
+    <slot name="header"></slot>\
+  </header>\
+  <main>\
+    <slot></slot>\
+  </main>\
+  <footer>\
+    <slot name="footer"></slot>\
+  </footer>\
+</div>'
+})
+
+var app9 = new Vue({
+  el: '#app-9',
+  data: {
+    price: 123
+  }
+})
+
