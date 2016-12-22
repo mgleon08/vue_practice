@@ -336,3 +336,32 @@ var parent = new Vue({
 // 訪問子元件
 var child = parent.$refs.profile
 console.log(child)
+
+// =======================================================
+// 工廠函式接收一個 resolve 回調，在收到從伺服器下載的元件定義時呼叫。也可以呼叫 reject(reason) 指示載入失敗。
+
+Vue.component('async-example', function (resolve, reject) {
+  setTimeout(function () {
+    // Pass the component definition to the resolve callback
+    resolve({
+      template: '<div>I am async!</div>'
+    })
+  }, 1000)
+})
+
+var app13 = new Vue({
+  el: '#app-13'
+})
+
+// 推薦配合使用 ：Webpack 的程式碼分割功能：http://webpack.github.io/docs/code-splitting.html
+// Vue.component('async-webpack-example', function (resolve) {
+//   // 這個特殊的 require 語法告訴 webpack
+//   // 自動將編譯後的程式碼分割成不同的塊，
+//   // 這些塊將透過 Ajax 請求自動下載。
+//   require(['./my-async-component'], resolve)
+// })
+// 你可以使用 Webpack 2 + ES2015 的語法返回一個 Promise resolve 函式：
+// Vue.component(
+//   'async-webpack-example',
+//   () => System.import('./my-async-component')
+// )
