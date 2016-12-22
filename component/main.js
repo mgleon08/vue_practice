@@ -275,9 +275,5 @@ Vue.component('app-layout', {
 })
 
 var app9 = new Vue({
-  el: '#app-9',
-  data: {
-    price: 123
-  }
+  el: '#app-9'
 })
-
