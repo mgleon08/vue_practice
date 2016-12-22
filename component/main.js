@@ -325,3 +325,14 @@ var app11 = new Vue({
     archive: { template: '<p>Welcome archive!</p>' }
   }
 })
+
+// =======================================================
+// 當 ref 和 v-for 一起使用時， ref 是一個陣列或物件，包含相應的子元件。
+// $refs 只在元件渲染完成後才填充，並且它是非響應式的。它僅僅作為一個直接訪問子元件的應急方案——應當避免在模版或計算屬性中使用 $refs 。
+
+var parent = new Vue({
+  el: '#parent'
+})
+// 訪問子元件
+var child = parent.$refs.profile
+console.log(child)
