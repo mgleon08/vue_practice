@@ -231,21 +231,18 @@ Vue.component('currency-input', {
   ',
   props: ['value'],
   methods: {
-    // Instead of updating the value directly, this
-    // method is used to format and place constraints
-    // on the input's value
+    // 不是直接更新值，而是使用此方法來對輸入值進行格式化和位數限制
     updateValue: function (value) {
       var formattedValue = value
-        // Remove whitespace on either side
+        // 刪除兩側的空格符
         .trim()
-        // Shorten to 2 decimal places
+        // 保留 2 小數位
         .slice(0, value.indexOf('.') + 3)
-      // If the value was not already normalized,
-      // manually override it to conform
+      // 如果值不統一，手動覆蓋以保持一致
       if (formattedValue !== value) {
         this.$refs.input.value = formattedValue
       }
-      // Emit the number value through the input event
+      // 透過 input 事件發出數值
       this.$emit('input', Number(formattedValue))
     }
   }
