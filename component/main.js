@@ -277,3 +277,33 @@ Vue.component('app-layout', {
 var app9 = new Vue({
   el: '#app-9'
 })
+
+// =======================================================
+Vue.component('child', {
+  template: '<div class="child">\
+  <slot text="hello from child"></slot>\
+</div>'
+})
+
+Vue.component('my-awesome-list', {
+  template: '<ul>\
+  <slot name="item"\
+    v-for="item in items"\
+    :text="item.text">\
+    <!-- fallback content here -->\
+  </slot>\
+</ul>',
+  data: function(){
+    return {
+      items:[
+        { text: 'he' },
+        { text: 'll' },
+        { text: 'o' }
+      ]
+    }
+  }
+})
+
+var app10 = new Vue({
+  el: '#app-10'
+})
