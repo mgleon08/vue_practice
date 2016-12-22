@@ -307,3 +307,21 @@ Vue.component('my-awesome-list', {
 var app10 = new Vue({
   el: '#app-10'
 })
+
+// =======================================================
+// 也可以直接繫結到元件物件上：
+// var Home = {
+//     template: '<p>Welcome home!</p>'
+//   }
+
+var app11 = new Vue({
+  el: '#app-11',
+  data: {
+    currentView: 'home'
+  },
+  components: {
+    home: { template: '<p>Welcome home!</p>' },
+    posts: { template: '<p>Welcome posts!</p>' },
+    archive: { template: '<p>Welcome archive!</p>' }
+  }
+})
