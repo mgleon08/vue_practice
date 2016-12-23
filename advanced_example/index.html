@@ -72,6 +72,17 @@
     </transition>
   </div>
 
+  <hr>
+
+  <h2>003.Transitioning Between Components</h2>
+  <div id="transition-components-demo">
+    <input type="radio" value="v-a" id="a" v-model="view">A
+    <input type="radio" value="v-b" id="b" v-model="view">B
+    <transition name="component-fade" mode="out-in">
+      <component v-bind:is="view"></component>
+    </transition>
+  </div>
+
   </body>
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
