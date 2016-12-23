@@ -1,0 +1,48 @@
+/* 可以設定不同的進入和離開動畫 */
+/* 設定持續時間和動畫函式 */
+/* 會有 4 個(CSS)類名在 enter/leave 的過渡中切換 */
+/* v-enter: 定義進入過渡的開始狀態。在元素被插入時生效，在下一個幀移除。 */
+/* v-enter-active: 定義進入過渡的結束狀態。在元素被插入時生效，在 transition/animation 完成之後移除。 */
+/* v-leave: 定義離開過渡的開始狀態。在離開過渡被觸發時生效，在下一個幀移除。 */
+/* v-leave-active: 定義離開過渡的結束狀態。在離開過渡被觸發時生效，在 transition/animation 完成之後移除。 */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* =================================================== */
+
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
