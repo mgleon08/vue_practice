@@ -107,6 +107,23 @@
     </transition-group>
   </div>
 
+  <h2>006. list-complete</h2>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+  <div id="list-complete-demo" class="demo">
+    <button v-on:click="shuffle">Shuffle</button>
+    <button v-on:click="add">Add</button>
+    <button v-on:click="remove">Remove</button>
+    <transition-group name="list-complete" tag="p">
+      <span
+        v-for="item in items"
+        v-bind:key="item"
+        class="list-complete-item"
+      >
+        {{ item }}
+      </span>
+    </transition-group>
+  </div>
+
   </body>
     <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
     <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
