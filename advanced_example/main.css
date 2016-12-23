@@ -5,6 +5,9 @@
 /* v-enter-active: 定義進入過渡的結束狀態。在元素被插入時生效，在 transition/animation 完成之後移除。 */
 /* v-leave: 定義離開過渡的開始狀態。在離開過渡被觸發時生效，在下一個幀移除。 */
 /* v-leave-active: 定義離開過渡的結束狀態。在離開過渡被觸發時生效，在 transition/animation 完成之後移除。 */
+
+/* app1 */
+
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
@@ -16,7 +19,7 @@
   opacity: 0;
 }
 
-/* =================================================== */
+/* app2 =================================================== */
 
 .bounce-enter-active {
   animation: bounce-in .5s;
@@ -47,11 +50,25 @@
   }
 }
 
-/* =================================================== */
+/* app5 =================================================== */
 
 .component-fade-enter-active, .component-fade-leave-active {
   transition: opacity .3s ease;
 }
 .component-fade-enter, .component-fade-leave-active {
   opacity: 0;
+}
+
+/* app6 =================================================== */
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-active {
+  opacity: 0;
+  transform: translateY(30px);
 }
