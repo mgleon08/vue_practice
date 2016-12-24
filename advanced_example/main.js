@@ -5,14 +5,14 @@ var app = new Vue({
   }
 })
 
-var app2 = new Vue({
+new Vue({
   el: '#example-2',
   data: {
     show: true
   }
 })
 
-var app3 = new Vue({
+new Vue({
   el: '#example-3',
   data: {
     show: true
@@ -21,8 +21,8 @@ var app3 = new Vue({
 
 // ====================================
 
-var app4 = new Vue({
-  el: '#example-4',
+var app2 = new Vue({
+  el: '#app-2',
   data: {
     show: false
   },
@@ -49,7 +49,7 @@ var app4 = new Vue({
 
 // ====================================
 
-var app5 = new Vue({
+var app3 = new Vue({
   el: '#transition-components-demo',
   data: {
     view: 'v-a'
@@ -66,7 +66,7 @@ var app5 = new Vue({
 
 // ====================================
 
-var app6 = new Vue({
+var app4 = new Vue({
   el: '#list-demo',
   data: {
     items: [1,2,3,4,5,6,7,8,9],
@@ -87,7 +87,7 @@ var app6 = new Vue({
 
 // ====================================
 
-var app7 = new Vue({
+var app5 = new Vue({
   el: '#flip-list-demo',
   data: {
     items: [1,2,3,4,5,6,7,8,9]
@@ -101,7 +101,7 @@ var app7 = new Vue({
 
 // ====================================
 
-var app8 = new Vue({
+var app6 = new Vue({
   el: '#list-complete-demo',
   data: {
     items: [1,2,3,4,5,6,7,8,9],
@@ -125,7 +125,7 @@ var app8 = new Vue({
 
 // ====================================
 
-var app9 = new Vue({
+var app7 = new Vue({
   el: '#staggered-list-demo',
   data: {
     query: '',
@@ -175,7 +175,7 @@ var app9 = new Vue({
 
 // ====================================
 
-var app10 = new Vue({
+var app8 = new Vue({
   el: '#dynamic-fade-demo',
   data: {
     show: true,
