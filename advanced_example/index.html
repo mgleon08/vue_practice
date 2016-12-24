@@ -168,12 +168,16 @@
     <button v-on:click="stop = true">Stop it!</button>
   </div>
 
+  <hr>
+
   <h2>009. Animating State with Watchers</h2>
   <script src="https://unpkg.com/tween.js@16.3.4"></script>
   <div id="animated-number-demo">
     <input v-model.number="number" type="number" step="20">
     <p>{{ animatedNumber }}</p>
   </div>
+
+  <hr>
 
   <h2>010. Color.js</h2>
   <script src="https://unpkg.com/tween.js@16.3.4"></script>
@@ -191,6 +195,21 @@
       class="example-7-color-preview"
     ></span>
     <p>{{ tweenedCSSColor }}</p>
+  </div>
+
+  <hr>
+
+  <h2>011. Organizing Transitions into Components</h2>
+  <script src="https://unpkg.com/tween.js@16.3.4"></script>
+  <div id="example-8">
+    <input v-model.number="firstNumber" type="number" step="20"> +
+    <input v-model.number="secondNumber" type="number" step="20"> =
+    {{ result }}
+    <p>
+      <animated-integer v-bind:value="firstNumber"></animated-integer> +
+      <animated-integer v-bind:value="secondNumber"></animated-integer> =
+      <animated-integer v-bind:value="result"></animated-integer>
+    </p>
   </div>
 
   </body>
