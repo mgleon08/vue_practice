@@ -375,3 +375,23 @@ new Vue({
     test: 'this is data'
   }
 })
+
+// ====================================
+
+// 定義一個混合物件
+var myMixin = {
+  created: function () {
+    this.hello()
+  },
+  methods: {
+    hello: function () {
+      console.log('hello from mixin!')
+    }
+  }
+}
+// 定義一個使用混合物件的元件
+var Component = Vue.extend({
+  mixins: [myMixin]
+})
+
+var component = new Component() // -> "hello from mixin!"
