@@ -1,0 +1,23 @@
+<!-- : = v-bind -->
+<!-- @ = v-on -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown</title>
+  <link rel="stylesheet" type="text/css" href="./main.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <div id="editor">
+    <textarea :value="input" @input="update"></textarea>
+    <div v-html="compiledMarkdown"></div>
+  </div>
+  <script src="https://unpkg.com/vue@2.1.7/dist/vue.js"></script>
+  <script src="https://unpkg.com/lodash@4.16.0"></script>
+  <script src="https://unpkg.com/marked@0.3.6"></script>
+  <script src="./main.js" ></script>
+</body>
+
+</html>
