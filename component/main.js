@@ -365,3 +365,27 @@ var app13 = new Vue({
 //   'async-webpack-example',
 //   () => System.import('./my-async-component')
 // )
+
+// =======================================================
+
+Vue.component('example', {
+  template: '<button v-on:click="updateMessage">{{ message }}</button>',
+  data: function () {
+    return {
+      message: 'not updated ( in console )'
+    }
+  },
+  methods: {
+    updateMessage: function () {
+      this.message = 'updated'
+      console.log(this.$el.textContent) // => '沒有更新'
+      this.$nextTick(function () {
+        console.log(this.$el.textContent) // => '更新完成'
+      })
+    }
+  }
+})
+
+var app14 = new Vue({
+  el: '#app-14'
+})
