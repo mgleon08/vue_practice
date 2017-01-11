@@ -1,0 +1,32 @@
+<!-- : = v-bind -->
+<!-- @ = v-on -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Router</title>
+  <link rel="stylesheet" type="text/css" href="./main.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <div id="app">
+  <h1>Hello App!</h1>
+  <p>
+    <!-- 使用 router-link 元件來導航. -->
+    <!-- 透過傳入 `to` 屬性指定鏈接. -->
+    <!-- <router-link> 預設會被渲染成一個 `<a>` 標籤 -->
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+    <router-link to="/user/1">Go to User</router-link>
+  </p>
+  <!-- 路由出口 -->
+  <!-- 路由匹配到的元件將渲染在這裡 -->
+  <router-view></router-view>
+</div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="./main.js" ></script>
+</body>
+
+</html>
