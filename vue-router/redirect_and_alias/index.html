@@ -1,0 +1,35 @@
+<!-- : = v-bind -->
+<!-- @ = v-on -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect And Alias</title>
+  <link rel="stylesheet" type="text/css" href="./main.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <div id="app">
+    <h1>Named Views</h1>
+    <ul>
+      <li>
+        <router-link to="/redirect">redirect</router-link>
+      </li>
+      <li>
+        <router-link to="/redirect_name">redirect_name</router-link>
+      </li>
+      <li>
+        <router-link to="/other">/other</router-link>
+      </li>
+    </ul>
+    <router-view class="view one"></router-view>
+    <router-view class="view two" name="a"></router-view>
+    <router-view class="view three" name="b"></router-view>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
