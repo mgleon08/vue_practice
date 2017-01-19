@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Learn Vue 2: Step By Step: Object-Oriented Forms: Part 2</title>
+<!--   https://laracasts.com/series/learn-vue-2-step-by-step/episodes/20
+  https://github.com/laracasts/Vue-Forms/blob/master/public/js/app.js -->
+</head>
+
+<body>
+  <div id="app" class="container">
+    <form method="POST" action="/projects" @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
+      <div class="control">
+        <label for="name" class="label">Project Name:</label>
+        <input type="text" id="name" name="name" class="input" v-model="form.name">
+        <span class="help is-danger" v-if="form.errors.has('name')" v-text="form.errors.get('name')"></span>
+      </div>
+      <div class="control">
+        <label for="description" class="label">Project Description:</label>
+        <input type="text" id="description" name="description" class="input" v-model="form.description">
+        <span class="help is-danger" v-if="form.errors.has('description')" v-text="form.errors.get('description')"></span>
+      </div>
+      <div class="control">
+        <button class="button is-primary" :disabled="form.errors.any()">Create</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
