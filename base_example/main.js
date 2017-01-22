@@ -283,6 +283,7 @@ var app20 = new Vue({
   el: '#app-20',
   data: {
     message: 'Hello Vue!',
+    age: 11,
     checked: true,
     checkedNames: [],
     picked: 'One',
